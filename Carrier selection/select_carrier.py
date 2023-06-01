@@ -11,8 +11,17 @@ def calculate_pallets(packages, pallet_length, pallet_width, pallet_height):
 def calculate_shipping_cost(num_pallets, carrier_rates):
     min_cost = float("inf")
     best_carrier = None
-    for carrier, rate in carrier_rates.items():
-        cost = rate * num_pallets
+    for carrier, rate_info in carrier_rates.items():
+        rate_per_pallet = rate_info["rate_per_pallet"]
+        graduated_prices = rate_info.get("graduated_prices", {})
+        
+        # Check if graduated prices apply
+        for threshold, price in graduated_prices.items():
+            if num_pallets >= threshold:
+                rate_per_pallet = price
+                break
+        
+        cost = rate_per_pallet * num_pallets
         if cost < min_cost:
             min_cost = cost
             best_carrier = carrier
@@ -31,9 +40,27 @@ pallet_height = 120
 num_pallets = calculate_pallets(packages, pallet_length, pallet_width, pallet_height)
 
 carrier_rates = {
-    "Carrier A": 50,  # Rate per pallet
-    "Carrier B": 60,
-    "Carrier C": 55,
+    "Carrier A": {
+        "rate_per_pallet": 50,  # Rate per pallet
+        "graduated_prices": {
+            5: 45,  # $45 per pallet for 5 or more pallets
+            10: 40,  # $40 per pallet for 10 or more pallets
+        }
+    },
+    "Carrier B": {
+        "rate_per_pallet": 60,
+        "graduated_prices": {
+            5: 55,
+            10: 50,
+        }
+    },
+    "Carrier C": {
+        "rate_per_pallet": 55,
+        "graduated_prices": {
+            5: 50,
+            10: 45,
+        }
+    },
 }
 
 best_carrier, shipping_cost = calculate_shipping_cost(num_pallets, carrier_rates)
