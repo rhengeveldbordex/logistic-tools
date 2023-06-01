@@ -47,9 +47,9 @@ print("Number of pallets needed:", num_pallets)
 ```
 
 This will produce the following output:
-
+```python
 Number of pallets needed: 4
-
+```
 This means that 4 pallets are required to accommodate all the packages according to the given dimensions.
 
 # Contributions
