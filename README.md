@@ -1,6 +1,6 @@
 # Logistics Toolbox Repository
 
-This is a repository containing useful code snippets for logistics applications. The code snippets can be used to perform various logistics calculations and solve problems. One of the tools in this repository is a function called `calculate_pallets`, which calculates the number of pallets needed based on the given packages and pallet dimensions.
+This is a repository containing useful code snippets for logistics applications. The code snippets can be used to perform various logistics calculations and solve problems. One of the tools in this repository is a function called `calc_pallets.py`, which calculates the number of pallets needed based on the given packages and pallet dimensions.
 
 ## Installation
 
