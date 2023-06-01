@@ -43,7 +43,8 @@ pallet_width = 100
 pallet_height = 120
 
 num_pallets = calculate_pallets(packages, pallet_length, pallet_width, pallet_height)
-print("Number of pallets needed:", num_pallets)```
+print("Number of pallets needed:", num_pallets)
+```
 
 This will produce the following output:
 
