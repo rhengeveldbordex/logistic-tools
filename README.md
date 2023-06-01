@@ -1,4 +1,4 @@
-# Logistics Toolbox Repository
+# Logistic Tools Repository
 
 This is a repository containing useful code snippets for logistics applications. The code snippets can be used to perform various logistics calculations and solve problems. One of the tools in this repository is a function called `calc_pallets.py`, which calculates the number of pallets needed based on the given packages and pallet dimensions.
 
@@ -7,10 +7,10 @@ This is a repository containing useful code snippets for logistics applications.
 To use the code snippets from this repository, follow the steps below:
 
 1. Clone the repository to your local machine:
-git clone https://github.com/rhengeveldbordex/logistics-toolbox.git
+git clone https://github.com/rhengeveldbordex/logistic-tools.git
 
 2. Navigate to the cloned repository:
-cd logistics-toolbox
+cd logistic-tools
 
 
 3. The code can be executed using a Python interpreter. Make sure Python is installed on your system.
@@ -53,4 +53,4 @@ Number of pallets needed: 4
 This means that 4 pallets are required to accommodate all the packages according to the given dimensions.
 
 # Contributions
-Contributions to the logistics toolbox repository are welcome. If you propose an improvement or want to add a new feature, you can submit a pull request with your changes. Make sure your changes are well-documented and tested.
+Contributions to the logistic-tools repository are welcome. If you propose an improvement or want to add a new feature, you can submit a pull request with your changes. Make sure your changes are well-documented and tested.
